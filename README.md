@@ -1,10 +1,13 @@
 REST API Docs 
-REST API designed for individual user to view his/her electricity consumptions limits overall and also on daily and monthly basis. This API is designed using Python programming language and SQLite database. 
+REST API designed for authenticated user to view his/her electricity consumptions limits overall as well as view data of authenticated user on daily and monthly basis. This API is designed using Python programming language and SQLite database. 
 
-Python version: Python3.7
+Python version:  Python3.7
 
-Amount of time spent on this project: 12 hours approx.  
+Amount of time spent on this project:  12 hours approx.  
 
+
+Resource Description:
+---------
 
 Open Endpoints
 --------------------------------------------------------
@@ -181,9 +184,13 @@ A User with name of 'a201', passing header parameters  ' start=2014-04-01â€™ & â
 }  
 
 Error Response
-Condition: If provided data is invalid, e.g. a name field is too long.
+
+Condition: If provided x-access-token is invalid.
+
   Code: 401 UNAUTHORIZED
+  
   Content example:
+  
 {
     "message": "Token is invalid!"
 } 
